@@ -35,6 +35,7 @@ pip install -U aiogram
 
 # Результат
 Таким образом получаем следующий функционал в Телеграм боте
-
+<p>
 <img src="/img/1.jpg" width="300">
 <img src="/img/2.jpg" width="300">
+</p>
