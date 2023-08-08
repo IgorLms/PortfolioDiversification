@@ -45,7 +45,7 @@ def tinkoff_portfolio(tinkoff_api_token: str) -> dict:
                 bond = client.instruments.bond_by(id=portfolio_positions.figi, id_type=InstrumentIdType.INSTRUMENT_ID_TYPE_FIGI)  # Полная информация об облигации в портфеле
 
                 name_bond = bond.instrument.name  # Название облигации
-                sector_bond = bond.instrument.sector  # Название облигации
+                sector_bond = bond.instrument.sector  # Сектор экономики облигации
                 sum_bond_body = money_value(portfolio_positions.current_price.units, portfolio_positions.current_price.nano, portfolio_positions.quantity.units)  # Цена облигации в портфеле
                 sum_bond_nkd = money_value(portfolio_positions.current_nkd.units, portfolio_positions.current_nkd.nano, portfolio_positions.quantity.units)  # Цена НКД в портфеле
                 sum_bond = round(sum_bond_body + sum_bond_nkd, 2)  # Цена облигации в портфеле с НКД
